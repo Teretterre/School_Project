@@ -12,16 +12,23 @@ clock = pygame.time.Clock()
 
 
 def main():
-    NUM = 0
-    exercise = Exercises(20, 20, NUM)
+    textinput = TextInput(20, 500, 700, 40, 30, text_color=const.BLACK, bg_color=const.WHITE, border_color=const.GRAY, active_border_color=const.GREEN)
+    exercises = Exercises(20, 20)
+    current_ex = 0
     running = True
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        draw_back_gradient(screen, (135, 180, 200), (0, 191, 255))
-        screen.blit(exercise.image, exercise.topleft)
+            textinput.update(event)
+        #обновление объектов
+        exercises.update(current_ex)
 
+
+        #отрисовка
+        draw_back_gradient(screen, (135, 180, 200), (0, 191, 255))
+        exercises.render(screen)
+        textinput.render(screen)
 
 
         pygame.display.flip()

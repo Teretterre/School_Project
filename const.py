@@ -8,6 +8,8 @@ BLACK = ( 0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = ( 255, 0, 0)
+GRAY = (128, 128, 128)
 
 #задания:
-EXERCIZES = ["img/exercise_1.png"]
+EX_WIDHT = 200
+EX_HEIGHT = 50

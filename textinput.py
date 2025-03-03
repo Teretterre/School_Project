@@ -13,7 +13,7 @@ class TextInput:
 
     def update(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if self.rect.colliderect(event.pos):
+            if self.rect.collidepoint(event.pos):
                 self.active = True
                 self.border_color = self.active_border_color
             else:
@@ -29,7 +29,7 @@ class TextInput:
     def render(self, screen):
         # Отрисовывает поле ввода
         pygame.draw.rect(screen, self.bg_color, self.rect)  # Фон
-        pygame.draw.rect(screen, self.border_color, self.rect, 2)  # Граница
+        pygame.draw.rect(screen, self.inactive_border_color, self.rect, 2)  # Граница
         text_surface = self.font.render(self.text, True, self.text_color)  # Текст
         screen.blit(text_surface, (self.rect.x + 5, self.rect.y + (self.rect.height - text_surface.get_height()) // 2))  # Отрисовка
 
