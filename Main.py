@@ -13,8 +13,8 @@ clock = pygame.time.Clock()
 
 def main():
     textinput = TextInput(20, 500, 700, 40, 30, text_color=const.BLACK, bg_color=const.WHITE, border_color=const.GRAY, active_border_color=const.GREEN)
-    exercises = Exercises(20, 20)
-    current_ex = 0
+    exercises = Exercises(const.SCREEN_WIDTH//2-(const.EX_WIDHT//2), 20)
+    current_ex = 4
     running = True
     while running:
         for event in pygame.event.get():
@@ -23,7 +23,6 @@ def main():
             textinput.update(event)
         #обновление объектов
         exercises.update(current_ex)
-
 
         #отрисовка
         draw_back_gradient(screen, (135, 180, 200), (0, 191, 255))

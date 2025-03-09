@@ -5,13 +5,13 @@ class Exercises():
     def __init__(self, x, y):
         self.number_ex = 0
         self.exercise_imgs = [
-            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT, const.EX_HEIGHT]),
-            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT, const.EX_HEIGHT]),
-            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT, const.EX_HEIGHT]),
-            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT, const.EX_HEIGHT]),
-            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT, const.EX_HEIGHT])
+            pygame.transform.scale(pygame.image.load("img/exercise_1.png"), [const.EX_WIDHT+100, const.EX_HEIGHT]),
+            pygame.transform.scale(pygame.image.load("img/exercise_2.png"), [const.EX_WIDHT, const.EX_HEIGHT]),
+            pygame.transform.scale(pygame.image.load("img/exercise_3.png"), [const.EX_WIDHT+200, const.EX_HEIGHT]),
+            pygame.transform.scale(pygame.image.load("img/exercise_4.png"), [const.EX_WIDHT+200, const.EX_HEIGHT]),
+            pygame.transform.scale(pygame.image.load("img/exercise_5.png"), [const.EX_WIDHT+100, const.EX_HEIGHT])
         ]
-        self.exercise_answers = [156, 156, 156, 156, 156]
+        self.exercise_answers = [-9, 1, 6, 3, -36]
         self.image = self.exercise_imgs[self.number_ex]
         self.rect = self.image.get_rect()
         self.rect.topleft = [x, y]
