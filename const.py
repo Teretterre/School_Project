@@ -11,5 +11,5 @@ RED = ( 255, 0, 0)
 GRAY = (128, 128, 128)
 
 #задания:
-EX_WIDHT = 200
-EX_HEIGHT = 50
+EX_WIDHT = 400
+EX_HEIGHT = 80
