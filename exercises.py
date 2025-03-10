@@ -11,7 +11,7 @@ class Exercises():
             pygame.transform.scale(pygame.image.load("img/exercise_4.png"), [const.EX_WIDHT+200, const.EX_HEIGHT]),
             pygame.transform.scale(pygame.image.load("img/exercise_5.png"), [const.EX_WIDHT+100, const.EX_HEIGHT])
         ]
-        self.exercise_answers = [-9, 1, 6, 3, -36]
+        self.exercise_answers = ['-9', '1', '6', '3', '-36']
         self.image = self.exercise_imgs[self.number_ex]
         self.rect = self.image.get_rect()
         self.rect.topleft = [x, y]
