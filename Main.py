@@ -2,6 +2,7 @@ import pygame
 import const
 from background import draw_back_gradient
 import exercises
+from const import EX_WIDHTS
 from exercises import Exercises
 from textinput import TextInput
 from button import Button
@@ -13,9 +14,9 @@ clock = pygame.time.Clock()
 
 
 def main():
-    textinput = TextInput(20, 500, 700, 40, 30, text_color=const.BLACK, bg_color=const.WHITE, border_color=const.GRAY, active_border_color=const.GREEN)
-    exercises = Exercises(const.SCREEN_WIDTH//2-( const.EX_WIDHT// 2), 20)
     current_ex = 0
+    textinput = TextInput(20, 500, 700, 40, 30, text_color=const.BLACK, bg_color=const.WHITE, border_color=const.GRAY, active_border_color=const.GREEN)
+    exercises = Exercises(const.SCREEN_WIDTH//2-(const.EX_WIDHTS[current_ex]//2), 20)
     score = 0
     stati = []
     show_result = False
