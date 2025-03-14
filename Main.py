@@ -56,7 +56,7 @@ def main():
             result_surface = pygame.font.Font(None, 50).render(result_text, True, const.GREEN)
             screen.blit(result_surface, (const.SCREEN_WIDTH//2 - result_surface.get_width()//2, 100))
             for i in range(len(exercises.exercise_answers)):
-                result_text = f"{i} ответ {stati[i]} "
+                result_text = f"{i+1} ответ {stati[i]} "
                 result_surface = pygame.font.Font(None, 50).render(result_text, True, const.GREEN)
                 screen.blit(result_surface, (const.SCREEN_WIDTH // 2 - result_surface.get_width() // 2, 200+i*100))
         else:
